@@ -14,7 +14,7 @@ return (
     <ListItem>
         <p>{name} : {phone}</p>
         <StyledButton type="button" 
-        onClick={() => dispatch(contactDeleteOf(id))}>
+        onClick={() => contactDeleteOf(id)}>
             Delete
         </StyledButton>
     </ListItem>
