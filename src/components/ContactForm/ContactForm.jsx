@@ -62,6 +62,7 @@ export const ContactForm = () => {
       return toast.info(`${data.number} has alredy in your contacts`);
     };
     dispatch(addContact(data));
+    console.log(data)
     toast.info('New contact has been added to your phonebook')
     reset();
    };
