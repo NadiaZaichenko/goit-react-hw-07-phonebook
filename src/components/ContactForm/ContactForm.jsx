@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact,getContactsItems } from 'reducer/contactsSlice';
+import { addContact} from 'reducer/operation';
+import { selectContactsItems } from 'reducer/selectors';
 import {toast} from 'react-toastify';
 import {useForm} from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -34,7 +35,7 @@ const schema = yup.object().shape({
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contactsItems = useSelector(getContactsItems);
+  const contactsItems = useSelector(selectContactsItems);
   const {
       register, 
       handleSubmit,
