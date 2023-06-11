@@ -19,8 +19,8 @@ export function ContactList() {
 
   return (
     <List>
-      {filteredContacts.map(({ id, name, number }) => {
-        return <ContactItem key={id} id={id} name={name} number={number} />;
+      {filteredContacts.map(({ id, name, phone }) => {
+        return <ContactItem key={id} id={id} name={name} phone={phone} />;
       })}
     </List>
   );

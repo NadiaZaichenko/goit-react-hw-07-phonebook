@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from 'reducer/operation';
 import { ListItem, StyledButton } from './ContactItem.styled'
 
-export const ContactItem = ({id, name, number}) => {
+export const ContactItem = ({id, name, phone}) => {
     const dispatch = useDispatch();
 
     const contactDeleteOf = (id) => {
@@ -12,7 +12,7 @@ export const ContactItem = ({id, name, number}) => {
     }
 return (
     <ListItem>
-        <p>{name} : {number}</p>
+        <p>{name} : {phone}</p>
         <StyledButton type="button" 
         onClick={() => dispatch(contactDeleteOf(id))}>
             Delete
@@ -24,6 +24,6 @@ return (
 ContactItem.propTypes ={
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
 
 }
